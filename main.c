@@ -97,7 +97,6 @@ void grafcet_G0(GG *G){
     if(G->x1 == 1 && G->R1 == 1) grafcet_G3(G);
     if(G->x2 == 1 && G->R2 == 1) grafcet_G4(G);
 
-
     //合併
     if(G->x3 == 1 && G->x4 == 1 && G->R3_4 == 1)
         grafcet_G5(G);
@@ -145,13 +144,11 @@ void grafcet_G1_2(GG *G){
     G->x0 = 0;
     G->x1 = 1;
     G->x2 = 1;
-    if (G->x5 == 1) {
-        G->x5 = 0;
-    }
+    if (G->x5 == 1) G->x5 = 0;
 }
 
 void runBrushTooth(GG *G){
-     G->R5 = 0;
+    G->R5 = 0;
     G->R0 = 0;
     G->R1 = 1;
     printf("1\t\t");
